@@ -1,0 +1,52 @@
+#include<stdio.h>
+#include<ctype.h>
+char str[1005];
+int main()
+{
+    int n,i,min,min2;
+    while(scanf("%s%n",&str,&n)!=EOF)
+    {
+    min=min2=0;
+    for(i=0;i<n;i++)
+    {
+            if(i%2==0)
+            {
+                      if(islower(str[i]))
+                      {
+                      min++;
+                      //toupper(str[i]);
+                      }
+            }
+            else
+            {
+                      if(isupper(str[i]))
+                      {
+                      min++;
+                      //tolower(str[i]);
+                      }
+            }
+    }
+                              
+    for(i=0;i<n;i++)
+    {
+            if(i%2==0)
+            {
+                      if(isupper(str[i]))
+                      {
+                      min2++;
+                      tolower(str[i]);
+                      }
+            }
+            else
+            {
+                      if(islower(str[i]))
+                      {
+                      min2++;
+                      toupper(str[i]);
+                      }
+            }
+    }
+    printf("%d\n",min<min2?min:min2);
+    }
+    //scanf("%d",&n);
+}

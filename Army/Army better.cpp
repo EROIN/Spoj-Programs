@@ -1,0 +1,25 @@
+#include<cstdio>
+main()
+{
+      int t,n,m,i,maxg,maxm,x;
+      scanf("%d",&t);
+      while(t--)
+      {
+                maxm=maxg=-1;
+                scanf("%d%d",&n,&m);
+                for(i=0;i<n;i++)
+                {
+                scanf("%d",&x);
+                if(x>maxg)
+                maxg=x;
+                }x=0;
+                for(i=0;i<m;i++)
+                {
+                scanf("%d",&x);
+                if(x>maxm)
+                maxm=x;
+                }
+                maxm>maxg?printf("MechaGodzilla\n"):printf("Godzilla\n");
+      }
+      scanf("%d",&t);
+}
